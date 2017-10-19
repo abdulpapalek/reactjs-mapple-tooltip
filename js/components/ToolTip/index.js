@@ -92,6 +92,7 @@ export default class ToolTip extends Component {
     return this.mappleTypeList.includes(mappleType) ? mappleType : 'default';
   }
   handleMouseEnter(event) {
+    console.log("hahaha atay");
     const { direction } = this.props;
     const { float } = this.state;
     const position = new Position();
