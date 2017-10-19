@@ -140,7 +140,7 @@ export default class ToolTip extends Component {
     clearTimeout(this.setTime);
     this.setTime = setTimeout(() => {
       this.setState(this.setPropsValues(this.props));
-    }, this.timeOut);
+    }, 10000);
   }
 
   handleMouseMove(event) {
