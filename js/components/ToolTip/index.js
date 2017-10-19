@@ -132,7 +132,7 @@ export default class ToolTip extends Component {
           }
         });
       });
-    }, this.timeOut);
+    }, 3);
   }
 
   handleMouseLeave() {
