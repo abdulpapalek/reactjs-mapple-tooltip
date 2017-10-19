@@ -51,11 +51,19 @@ export default class MappleTypeCSS {
       backgroundColor: this.currentMapple.backgroundColor,
       border: this.currentMapple.border ? `1px solid ${this.currentMapple.borderColor || this.currentMapple.textColor}` : null,
       borderRadius: `${this.borderRadius}px`,
-      -webkit-transition-duration: 5s; /* Safari */
-      -webkit-transition-delay: 2s; /* Safari */
-      transition-property: width;
-      transition-duration: 5s;
-      transition-delay: 2s;
+      WebkitTransition: `opacity ${this.fadeInAnimation}s ease-in-out`,
+      msTransition: `opacity ${this.fadeInAnimation}s ease-in-out`,
+      webkit-animation:fadeIn ease-in 3;
+      moz-animation:fadeIn ease-in 3;
+      animation:fadeIn ease-in 3;
+
+      webkit-animation-fill-mode:forwards; 
+      moz-animation-fill-mode:forwards;
+      animation-fill-mode:forwards;
+
+      webkit-animation-duration:3s;
+      moz-animation-duration:3s;
+      animation-duration:3s;
     };
   }
   getTipStyle(tipSize, color) {
